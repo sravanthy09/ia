@@ -8,7 +8,7 @@ data "aws_security_group" "default" {
 }
 
 module "vpc" {
-  source = "https://github.com/terraform-aws-modules/terraform-aws-vpc"
+  source = "git::https://github.com/terraform-aws-modules/terraform-aws-vpc.git"
 
   name = "simple-example"
 
