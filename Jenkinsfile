@@ -23,7 +23,7 @@ pipeline{
       steps{
         dir('vpc-tf'){
           sh 'terraform init'
-          sh 'terraform apply'
+          sh 'terraform apply -auto-approve'
         } 
       }
     }
