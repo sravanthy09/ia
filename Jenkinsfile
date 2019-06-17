@@ -18,5 +18,14 @@ pipeline{
         sh 'terraform --version'
       }
     }
+    
+    stage('Deploy infrastructure'){
+      steps{
+        dir('vpc-tf'){
+          sh 'terraform init'
+          sh 'terraform apply'
+        } 
+      }
+    }
   }
 }
